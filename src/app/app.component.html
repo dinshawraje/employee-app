@@ -1,11 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  
+<div style = "text-align:center">
+   <span appChangeText >Welcome to {{title}}.</span>
 </div>
-<h2>Here are some links to help you start: </h2>
 
 <div> Months :
    <select (change)="selectChangeHandler($event)">
@@ -15,5 +11,16 @@
 <article>
 
     <p><span>You selected: </span><b>{{selectedDay}}</b></p>
+
 </article>
+<div>
+<h1>Custom Pipe</h1>
+<b>Square root of 25 is: {{25 | sqrt}}</b>
+<br/>
+<b>Square root of 729 is: {{729 | sqrt}}</b>
+</div>
+
+<a routerLink = "dashboard">Dashboard</a>
+
+
 <router-outlet></router-outlet>

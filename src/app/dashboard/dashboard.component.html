@@ -1,0 +1,24 @@
+<div class="container">
+	<p>dashboard works!</p>
+	<p>dashboard date {{todaydate}} </p>
+
+   <form [formGroup] = "formdata" (ngSubmit) = "onClickSubmit(formdata.value)" >
+   	  <div class="form-group">
+    <label for="email">Email address:</label>
+
+      	<input type = "text" class = "fortextbox form-control" name = "emailid" placeholder = "emailid" 
+         formControlName="emailid">
+</div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+
+      <input type = "password" class = "fortextbox form-control" name="passwd" 
+         placeholder = "passwd" formControlName = "passwd">
+</div>
+  <button type="submit" class="btn btn-default forsubmit">Submit</button>
+
+   </form>
+</div>
+<p>
+   Email entered is : {{emailid}}
+</p>
